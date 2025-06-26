@@ -1,0 +1,28 @@
+.mainwrapper {
+    background: url('./tokyoguesthouse2.png') no-repeat center;
+    background: cover;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.submitbuttoncontainer button {
+    background-color: rgb(61, 61, 64);
+    height: 50px;
+
+}
+.content strong {
+    font-size: 25px;
+}
+
+.form-details img {
+    width: 250px; /* Instead of scale */
+    height: 250px;
+    border-radius: 100%;
+    margin-left: 20%;
+}
+
+.form-label {
+    margin-left: 0;
+}

@@ -1,0 +1,426 @@
+/* Main Booking Page Styles */
+
+.bookingpagebody {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.bookingpagebody h2 {
+    font-size: 50px;
+}
+
+.restartbookingbtn {
+    position: relative;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.restartbookingbtn:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 15px; /* Adjust position below the text */
+    width: 0;
+    height: 2px; /* Adjust underline height */
+    background-color:black;/* Set your desired underline color */
+    transition: width 0.3s ease-in-out; /* Animation duration and easing */
+
+}
+.restartbookingbtn:hover::after {
+    width: 100%;
+}
+
+.navigationbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 900px;
+    width: 90vw;
+    margin: 0 auto; /* Center the navigation buttons */
+    border-top: 3px solid black;
+}
+.navigationbuttons button {
+    position: relative;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.navigationbuttons button:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 15px; /* Adjust position below the text */
+    width: 0;
+    height: 2px; /* Adjust underline height */
+    background-color:black;/* Set your desired underline color */
+    transition: width 0.3s ease-in-out; /* Animation duration and easing */
+
+}
+.navigationbuttons button:hover::after {
+    width: 100%;
+}
+
+/* People Booking Section Styles */
+
+
+.peopleoptionsparent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+    width: max-content;
+    margin: 0 auto;
+    padding-left: 100px;
+}
+
+.peoplebutton {
+    width: 60px;                  /* Wider for better appearance */
+    height: 50px;
+    background-color: rgb(52, 51, 51);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    display: flex;                /* Use flex to center text */
+    align-items: center;          /* Vertical centering */
+    justify-content: center;      /* Horizontal centering */
+    font-size: 18px;
+    text-align: center;
+    line-height: normal;          /* Reset line-height */
+}
+
+.peoplebutton.selected {
+    background-color: grey;
+    color: white;
+    width: 60px;                  /* Wider for better appearance */
+    height: 50px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    display: flex;                /* Use flex to center text */
+    align-items: center;          /* Vertical centering */
+    justify-content: center;      /* Horizontal centering */
+    font-size: 18px;
+    text-align: center;
+    line-height: normal; /* Reset line-height */
+}
+
+.peoplebutton:hover {
+    background-color: rgb(232, 232, 233);
+    color: black;
+}
+
+/* Room Display Booking Section Styles */
+.roomdisplay {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px; /* space between image and details */
+    margin-top: 20px;
+}
+
+.roomdetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 400px;
+    text-align: left;
+}
+
+.roomdetails span {
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+
+.roomtitle h1 {
+    text-align: center;
+}
+.roomtypeoption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+
+.roomdisplay img {
+    width: 800px;
+    height: 600px;
+}
+
+.roomfeatures h1 {
+    font-size: 25px;
+}
+
+.roomfeatures img {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.roomselectionbutton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+}
+.roomselectionbutton button {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(52, 51, 51);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    line-height: normal;
+
+
+}
+
+.roomselectionbutton button:hover {
+    background-color: rgb(232, 232, 233);
+    color: black;
+}
+
+.roomselectiondeclaration {
+    text-align: center;
+    max-width: 300px;
+    position: absolute;
+    transform: translateY(75px);
+}
+
+.roomselectiondeclaration p {
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+/*Start Day Calendar */
+.calendar {
+    margin-bottom: 75px;
+}
+.bookingtitle {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 50px;
+}
+.calendarbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calendarcontrols select {
+    width: 150px;
+    border-radius: 10px;
+    height: 30px;
+    text-align: center;
+}
+
+.calendarcontrols input {
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 50px;
+    height: 30px;
+    text-align: center;
+}
+
+.calendartablewrapper {
+    display: flex;
+    justify-content: center;
+}
+.calendarselected {
+  background-color: rgb(128, 132, 128, 0.5);
+  color: black;
+  transition: background 0.2s;
+}
+.selecteddaymessage {
+    margin-top: 15%;
+    margin-right: 5%;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+.fullbooked {
+    display: flex;
+    font-size: 25px;
+    color: red;
+    position: relative;
+    justify-content: center;
+    margin-top: 20%;
+}
+.stopadjacentbooking {
+    display: flex;
+    font-size: 15px;
+    color: red;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1%;
+}
+.calendartable {
+    border-collapse: collapse;
+}
+.calendartable td {
+  width: 150px;
+  height: 150px;
+  text-align: right;
+  vertical-align: top;
+  padding: 5px;
+  font-weight: bold;
+  border: solid 1px black;
+}
+.calendartable th {
+  font-weight: bold;
+}
+
+/*Confirm Booking*/
+.reservationwrapper {
+    width: 90vw;
+    margin: 0 auto;
+    align-self: center;
+    padding-top: 50px;
+
+
+}
+.reservationdetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centers children horizontally */
+    justify-content: center;
+}
+.reservationdetails ul {
+    list-style-type: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    min-width: 250px;
+    background: #fafafa;
+    list-style: none;
+    width: 35vw;
+
+}
+.reservationdetails span {
+    font-weight: bold;
+}
+
+.reservationdetails p {
+    padding-top: 10px;
+}
+.confirmreservationbuttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.confirmreservation {
+    width: 200px;
+    height: 75px;
+    background-color: rgb(52, 51, 51);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    line-height: normal;
+}
+.confirmreservation:hover {
+    background-color: rgb(232, 232, 233);
+    color: black;
+}
+.returntobookingstart {
+    width: 200px;
+    height: 75px;
+    background-color: rgb(52, 51, 51);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    line-height: normal;
+}
+.returntobookingstart:hover {
+    background-color: rgb(232, 232, 233);
+    color: black;
+}
+.addreservation {
+    width: 200px;
+    height: 75px;
+    background-color: rgb(52, 51, 51);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    line-height: normal;
+    display: block;
+    margin: 0 auto 2rem auto;
+}
+
+.addreservation:hover {
+    background-color: rgb(232, 232, 233);
+    color: black;
+}
+.currentreservations {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+  border-top: 3px solid black;
+  width: 90vw;
+}
+
+.currentreservationstitle {
+    margin-top: 50px;
+}
+
+.currentreservationstitle h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.currentreservationsdetails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: start;
+    max-width: 1700px; /* 5 * 320px + 4 * 1.5rem gap */
+    margin: 0 auto;
+    padding-top: 1.5rem;
+}
+
+.currentreservationsdetails ul {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fafafa;
+  list-style: none;
+  width: 300px;
+  height: 500px;
+  box-sizing: border-box;
+  margin-left: 0 auto;
+}
+.removereservationbutton {
+    width: 150px;
+    height: 50px;
+    background-color: rgb(52, 51, 51);
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 10px;
+
+}
+.removereservationbutton:hover {
+    background-color: rgb(180, 180, 183);
+    color: black;
+}

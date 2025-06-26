@@ -1,0 +1,30 @@
+.welcomemessage{
+    font-size: 50px;
+    color: white;
+}
+.language-select-bg {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-btn {
+  margin: 20px;
+  padding: 18px 60px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(34,34,34,0.85);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+
+.lang-btn:hover {
+  background: #fff;
+  color: #222;
+}

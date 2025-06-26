@@ -1,0 +1,762 @@
+.bookingsmanager h2 {
+    margin: 0 auto;
+    padding-bottom: 50px;
+    border-bottom: solid 3px black;
+    width: 90vw;
+    font-size: 50px;
+
+}
+
+/* Calendar */
+.calendar {
+    margin-bottom: 75px;
+}
+
+.calendarnavbtn {
+  margin: 0 4px;
+  padding: 4px 10px;
+  font-size: 1.1em;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  cursor: pointer;
+}
+.calendarmonthlabel {
+  margin: 0 12px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.bookingtitle {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 50px;
+}
+.bookingmanagercalendarbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.calendarcontrols {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.calendarcontrols select {
+    width: 150px;
+    border-radius: 10px;
+    height: 30px;
+    text-align: center;
+}
+
+.calendarcontrols input {
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 50px;
+    height: 30px;
+    text-align: center;
+}
+
+.calendartablewrapper {
+    display: flex;
+    justify-content: center;
+}
+.calendarselected {
+  background-color: rgb(128, 132, 128, 0.5);
+  color: #fff;
+  transition: background 0.2s;
+}
+.selecteddaymessage {
+    margin-top: 15%;
+    margin-right: 5%;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+.calendartable {
+    border-collapse: collapse;
+}
+.calendartable td {
+  width: 150px;
+  height: 150px;
+  text-align: right;
+  vertical-align: top;
+  padding: 5px;
+  font-weight: bold;
+  border: solid 1px black;
+}
+
+.calendardaynumber {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  font-size: 0.85em;
+  font-weight: bold;
+  color: #333;
+}
+
+.calendartable th {
+  font-weight: bold;
+}
+.reservationtotal {
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    margin-top: 30%;
+
+}
+/*Reservations Table*/
+
+.reservationstablewrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    width: 90vw;
+    border-top: 3px solid black;
+    padding-top: 50px;
+}
+
+.reservationstablewrapper table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 80vw;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.reservationstablewrapper th, .reservationstablewrapper td {
+    padding: 12px 18px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.reservationstablewrapper h2 {
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+.reservationrow {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.reservationrow:hover {
+    background: #f0f8ff;
+}
+.searchforreservation {
+    width: 35vw;
+    display: flex;
+    gap: 25px;
+    padding-right: 125px;
+    padding-left: 125px;
+    padding-bottom: 50px;
+}
+
+.searchforreservation button {
+    position: relative;
+    color: white;
+    background: #302f2f;
+    border: none;
+    font-size: 10px; /* Make the X larger */
+    cursor: pointer;
+    border-radius: 10px;
+    width: 50px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.searchforreservation button:hover {
+    background-color: #676767;
+    color: white;
+}
+
+
+/*Reservation Table Buttons */
+.reservationtablenavigationbuttons {
+    padding-top: 50px;
+    display: flex;
+    width: 35vw;
+    
+}
+
+.reservationtablenavigationbuttons button {
+    position: relative;
+    color: white;
+    background: #302f2f;
+    border: none;
+    font-size: 20px; /* Make the X larger */
+    cursor: pointer;
+    border-radius: 10px;
+    width: 150px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.reservationtablenavigationbuttons button:hover {
+    background-color: #676767;
+    color: white;
+}
+
+/*Reservation Overlay */
+
+/*Calendar Modal Overlay */
+
+.reservationcalendaroverlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: transparent;   /* No dimming */
+    z-index: 2000;             /* Higher than .reservationmodaloverlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+}
+.reservationmodalcontentcalendar {
+    z-index: 2010; /* Ensure content is above overlay */
+}
+
+.reservationmodalcontentcalendar .calendartable td {
+  width: 70px;
+  height: 70px;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 80px;
+  max-height: 80px;
+  font-size: 13px;
+}
+
+.reservationmodaloverlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservationmodalcontent {
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 8px;
+    min-width: 320px;
+    max-width: 90vw;
+    position: relative;
+}
+
+.reservationmodalcontentcalendar {
+    background: #fff;
+    padding: 100px 100px;
+    border-radius: 8px;
+    min-width: 320px;
+    max-width: 90vw;
+    position: relative;
+}
+.reservationmodalcontentcalendar h3 {
+    border-bottom: 2px solid black;
+    width: 65%;
+    margin: 0 auto;
+}
+.reservationmodalcontentcalendar ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+    margin: 0;
+}
+
+.reservationmodalcontentcalendar li {
+    padding-bottom: 5px;
+}
+
+.reservationmodalcontentcalendar li:hover{
+    background-color: #676767;
+    color: white;
+    border-radius: 5px;
+}
+
+.reservationmodalcontentcalendar strong {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
+.reservationmodalcontent h3 {
+    border-bottom: 2px solid black;
+    width: 65%;
+    margin: 0 auto;
+}
+.reservationmodalcontent ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+    margin: 0;
+}
+
+.reservationmodalcontent li {
+    padding-bottom: 5px;
+}
+
+
+.reservationmodalcontent strong {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.reservationdetailsbuttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+.closemodalbtn {
+    position: relative;
+    color: white;
+    background:  #302f2f;
+    border: none;
+    font-size: 10px; /* Make the X larger */
+    cursor: pointer;
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.closemodalbtn:hover {
+    background-color: #676767;
+    color: white;
+}
+
+.editreservationbtn {
+    position: relative;
+    color: white;
+    background: #302f2f;
+    border: none;
+    font-size: 10px; /* Make the X larger */
+    cursor: pointer;
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.editreservationbtn:hover {
+    background-color: #676767;
+    color: white;
+}
+
+.deletereservationbtn {
+    position: relative;
+    color: white;
+    background: #302f2f;
+    border: none;
+    font-size: 10px; /* Make the X larger */
+    cursor: pointer;
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.deletereservationbtn:hover {
+    background-color: #676767;
+    color: white;
+}
+
+.showoncalendarbtn {
+    position: relative;
+    color: white;
+    background: #302f2f;
+    border: none;
+    font-size: 10px; /* Make the X larger */
+    cursor: pointer;
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.showoncalendarbtn:hover {
+    background-color: #676767;
+    color: white;
+}
+
+/*Room Price Editor */
+
+.editroompricesbtn {
+    position: relative;
+    color: white;
+    background: #302f2f;
+    border: none;
+    font-size: 20px; /* Make the X larger */
+    cursor: pointer;
+    border-radius: 10px;
+    width: 150px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.editroompricesbtn:hover {
+    background-color: #676767;
+    color: white;
+}
+
+.roompricewrapper {
+   margin-bottom: 100px;
+}
+.roompriceslist {
+
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* This centers items horizontally  */
+    justify-content: center;  /* This centers items vertically (optional for column) */
+
+}
+
+
+.roompricetitle {
+  text-align: center;
+  margin-bottom: 24px;
+  justify-content: center;
+  margin: 0 auto;
+
+}
+.roompricetitle h2 {
+    border-top: 3px solid black;
+    padding-top: 50px;
+    width: 90vw;
+    font-size: 30px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.roompriceslist ul {
+  list-style: none;
+  font-size: 25px;
+  padding: 0;
+  margin: 0 auto;    /* or a fixed width like 350px for more control */
+  max-width: 50vw;      /* adjust as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center the li elements horizontally */
+
+}
+
+.roompriceslist li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 1.1em;
+  gap: 20px;
+}
+
+.roompriceslist h3 {
+  margin: 0;
+  font-size: 1.08em;
+  font-weight: 500;
+  color: #222;
+  flex: 1;
+
+}
+
+.roompriceslist input[type="number"] {
+  width: 120px;
+  padding: 6px 10px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: .7em;
+  background: #f8f8f8;
+  margin-left: 16px;
+  text-align: right;
+  transition: border 0.2s;
+}
+
+.roompriceslist input[type="number"]:focus {
+  border: 1.5px solid #0077b6;
+  outline: none;
+  background: #e9f6fb;
+}
+
+/*Music Schedule Table */
+
+.musicschedulewrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    width: 90vw;
+    border-top: 3px solid black;
+    padding-top: 50px;
+}
+.musicscheduletable{
+    margin-left: 3.5%;
+}
+
+.musicschedulewrapper table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 80vw;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.musicschedulewrapper th, .musicschedulewrapper td {
+    padding: 12px 18px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.musicschedulewrapper tr {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.musicschedulewrapper tr:hover {
+    background: #f0f8ff;
+}
+
+.addtomusicschedulebtn button {
+    position: relative;
+    color: white;
+    background: #302f2f;
+    border: none;
+    font-size: 20px; /* Make the X larger */
+    cursor: pointer;
+    border-radius: 10px;
+    width: 150px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.addtomusicschedulebtn button:hover {
+    background-color: #676767;
+    color: white;
+}
+
+.addtomusicscheduleoverlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addtomusicschedulecontent {
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 8px;
+  min-width: 500px;
+  max-width: 90vw;
+  min-height: 100px;
+  max-height: 90vh;
+  position: relative;
+}
+
+
+.addtomusicschedulecontent strong {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.addtomusicschedulecontent h3 {
+    border-bottom: 2px solid black;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.addtomusicschedulecontent input {
+    padding-left: 10px;
+}
+.addtomusicschedulebuttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.addtomusicschedulecancelbtn {
+    position: relative;
+  color: white;
+  background: #302f2f;
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 70px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+.addtomusicschedulecancelbtn:hover {
+    background-color: #676767;
+    color: white;
+}
+
+.addtomusicschedulesubmitbtn {
+
+    position: relative;
+  color: white;
+  background: #302f2f;
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 70px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  text-align: center;
+  margin: 0 auto;
+
+}
+.addtomusicschedulesubmitbtn:hover {
+    background-color: #676767;
+    color: white;
+}
+
+.addtomusicscheduledeletebtn {
+    position: relative;
+    color: white;
+    background: #302f2f;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.addtomusicscheduledeletebtn:hover {
+    background-color: #676767;
+    color: white;
+}
+
+.viewmusiceventoverlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.viewmusiceventcontent {
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 8px;
+  min-width: 500px;
+  max-width: 90vw;
+  min-height: 100px;
+  max-height: 90vh;
+  position: relative;
+}
+.viewmusiceventcontent h3 {
+    text-decoration: underline;
+}
+
+.viewmusiceventcontent ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+.viewmusiceventcontent li {
+    padding-bottom: 20px;
+}
+
+.viewmusiceventcontent strong {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+.viewmuseventcontent input {
+    
+}
+
+

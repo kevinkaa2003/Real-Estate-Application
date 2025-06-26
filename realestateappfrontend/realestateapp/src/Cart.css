@@ -1,0 +1,151 @@
+.cartpagebody {
+    background: url('./tokyoguesthouse4.png') no-repeat center;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
+}
+.cartmain {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    text-align: center;
+    height: 50%;
+    width: 30vw;
+
+}
+.paymentinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(194, 192, 192, 0.9);
+    height: auto;
+    min-height: 500px;
+    min-width: 500px;
+    border-radius: 5%;
+    padding-bottom: 50px;
+}
+.paymenttitle {
+    margin-top: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+}
+.cartinfo {
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(194, 192, 192, 0.9);
+    height: auto;
+    min-height: 500px;
+    min-width: 500px;
+    border-radius: 5%;
+    padding-top: 25px;
+
+
+}
+
+.cartinfo span {
+    color: rgb(61, 61, 64);
+}
+
+.cartproduct {
+    padding-left: 50px;
+    text-align: left;
+}
+
+.cartproduct p {
+    color: black;
+    font-weight: bold;
+}
+.cartproduct button {
+    position: relative;
+}
+.cartproduct button:after {
+    content: '';
+    position: absolute;
+    bottom: 20px; /* Adjust position below the text */
+    width: 0;
+    left: 0;
+    right: 0;
+    height: 1.3px; /* Adjust underline height */
+    background-color:black;/* Set your desired underline color */
+    transition: width 0.3s ease-in-out; /* Animation duration and easing */
+    margin: 0 auto;
+}
+
+.cartproduct button:hover:after {
+    width: 100%;
+}
+
+.cartproduct button img {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+
+}
+
+
+.carttotal {
+    padding-top: 100px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    text-align: left;
+}
+
+label {
+    display: inline-block;
+    color: rgb(61, 61, 64);
+    margin-right: 100%;
+}
+
+.carttotal {
+    display: flex;
+    color: black;
+    font-size: 25px;
+    border-top: 2px solid rgb(61, 61, 64);
+    width: 80%;
+    margin-left: 50px;
+    padding-left: 125px;
+}
+.carttitle {
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 25px;
+
+}
+
+.deletecart button {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(61, 61, 64);
+    border-radius: 5%;
+    width: 300px;
+    max-height: 50px;
+    margin-bottom: 25px;
+    line-height: 30px;
+}
+
+
+.deletecart button:hover {
+    background-color:  rgb(116, 116, 119);
+}
+
+.cartbookanotherreservation button {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(61, 61, 64);
+    border-radius: 5%;
+    width: 300px;
+    max-height: 50px;
+    margin-bottom: 25px;
+    line-height: 30px;
+}
+
+
+.cartbookanotherreservation button:hover {
+    background-color:  rgb(116, 116, 119);
+}

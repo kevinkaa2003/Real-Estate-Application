@@ -1,0 +1,184 @@
+
+
+.mainfooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    margin-bottom: 0%;
+    background-color:rgba(54, 54, 57, 0.935);
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+
+
+
+}
+.footerwrapper {
+    display: flex;
+    align-items: center; /* <-- vertically center children */
+    justify-content: space-between; /* or center */
+    gap: 50px; /* space between children */
+    height: 500px;
+
+
+}
+.footerlogo {
+    display: flex;
+    align-items: center; /* <-- vertically center image */
+    justify-content: center; /* <-- horizontally center image */
+    flex: 1;
+    padding-right: 5%;
+
+
+}
+.footerlogo img {
+    width: 300px; /* Instead of scale */
+    height: 300px;
+    border-radius: 100%;
+}
+.footercontact {
+    padding: 50px;
+    font-family: 'Georgia', serif;
+}
+.footercontact button {
+    margin-left: 35px;
+    font-family: 'Georgia', serif;
+}
+.footercontact button:hover {
+    color:black;
+}
+.footercontactinfo {
+    width: 300px;
+    z-index: 1;
+    text-align: left;
+    color: white;
+    margin-bottom: 18%;
+    font-size: 20px;
+    font-family: 'Georgia', serif;
+
+}
+
+.footercontactinfo strong {
+    font-size: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.facebookfooter {
+    position: relative;
+    color:blue; /* Set your desired text color */
+    text-decoration: none;
+    font-size: x-large;
+    font-family: 'Georgia', serif;
+}
+.facebookfooter:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust position below the text */
+    width: 0;
+    height: 2px; /* Adjust underline height */
+    background-color:blue;/* Set your desired underline color */
+    transition: width 0.3s ease-in-out; /* Animation duration and easing */
+}
+.facebookfooter:hover::after {
+    width: 100%;
+}
+
+.twitterfooter {
+    position: relative;
+    color: blue; /* Set your desired text color */
+    text-decoration: none;
+    font-size: x-large;
+    font-family: 'Georgia', serif;
+}
+.twitterfooter:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust position below the text */
+    width: 0;
+    height: 2px; /* Adjust underline height */
+    background-color:lightblue;/* Set your desired underline color */
+    transition: width 0.3s ease-in-out; /* Animation duration and easing */
+}
+.twitterfooter:hover::after {
+    width: 100%;
+}
+
+.instagramfooter {
+    position: relative;
+    color: blue;
+    text-decoration: none;
+    font-size: x-large;
+    font-family: 'Georgia', serif;
+}
+.instagramfooter:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust position below the text */
+    width: 0;
+    height: 2px; /* Adjust underline height */
+    background-color:burlywood;/* Set your desired underline color */
+    transition: width 0.3s ease-in-out; /* Animation duration and easing */
+}
+.instagramfooter:hover::after {
+    width: 30%;
+}
+
+.instagramfooter {
+    position: relative;
+    color: black; /* Set your desired text color */
+    text-decoration: none;
+    font-size: x-large;
+    font-family: 'Georgia', serif;
+}
+.instagramfooter:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust position below the text */
+    width: 0;
+    height: 2px; /* Adjust underline height */
+    background-color:burlywood;/* Set your desired underline color */
+    transition: width 0.3s ease-in-out; /* Animation duration and easing */
+}
+.instagramfooter:hover::after {
+    width: 100%;
+}
+
+.footersocialmedia a {
+    color: white;
+    font-family: 'Georgia', serif;
+
+}
+.footercontactbtn {
+    color: white;
+    font-size: 40px;;
+    margin-top: 0 auto;
+    font-weight: 500;
+    font-family: 'Georgia', serif;
+}
+
+.map {
+    padding: 50px;
+}
+.map iframe {
+    display: flex;
+    width: 350px;
+    height: 350px;
+    border-radius: 5px;
+    margin-left: 10px;
+
+}
+
+.map label {
+   justify-content: center;
+   width: 100%;
+   margin-bottom: 50px;
+   text-align: center;
+   font-size: 40px;
+   font-family: 'Georgia', serif;
+   color: white;
+}

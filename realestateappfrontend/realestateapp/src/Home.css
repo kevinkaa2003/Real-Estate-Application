@@ -1,0 +1,149 @@
+/* Home.css */
+
+.homeinfowrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 40px 0 60px 0;
+  box-sizing: border-box;
+}
+
+.conceptinfo,
+.hostelinfo,
+.foodinfo,
+.musicloungeinfo {
+  border-radius: 18px;
+  margin: 24px 0;
+  padding: 36px 32px;
+  width: 90vw;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.foodinfo img {
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
+  display: block;
+  margin: 0 0 32px 0; /* Only bottom margin, no negative margins */
+  border-radius: 0;
+  object-fit: cover;
+  z-index: 0;
+  position: relative;
+}
+
+.conceptinfo h1,
+.hostelinfo h1,
+.foodinfo h1,
+.musicloungeinfo h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: black;
+  text-align: center;
+  border-bottom: 3px solid black;
+  width: 90vw;
+  padding-bottom: 50px;
+}
+
+.conceptinfo p,
+.hostelinfo p,
+.foodinfo p,
+.musicloungedescription p {
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.musicloungeinfo img {
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
+  display: block;
+  margin: 0 0 32px 0; /* Only bottom margin, no negative margins */
+  border-radius: 0;
+  object-fit: cover;
+  z-index: 0;
+  position: relative;
+}
+
+.hostelinfo h4,
+.foodinfo h4 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 12px 0 4px 0;
+  color: black;
+  text-align: center;
+}
+
+.hostelinfo span,
+.fooddescription p {
+  font-size: 1.5rem;
+  color: black;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.hostelcontactbuttons button {
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 25px;
+}
+.hostelcontactbuttons button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 15px; /* Adjust position below the text */
+    width: 0;
+    height: 1.2px; /* Adjust underline height */
+    background-color:black;/* Set your desired underline color */
+    transition: width 0.3s ease-in-out; /* Animation duration and easing */
+
+}
+.hostelcontactbuttons button:hover::after {
+  width: 100%;
+}
+.musicscheduletitle {
+  margin-top: 50px;
+}
+.musicscheduletitle h2 {
+  font-size: 30px;
+}
+.musicloungedescription {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.musicscheduletable{
+  margin-top: 50px;
+  margin-right: 7%;
+}
+.musicscheduletable table {
+  border-collapse: collapse;
+  font-size: 25px;
+  min-width: 35vw;
+  max-width: 50vw;
+  
+}
+
+.musicscheduletable thead tr {
+  border-bottom: 2px solid black;
+}
+.musicscheduletable thead th {
+  border-bottom: 2px solid black;
+}
+
+.musicscheduletable td {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+}

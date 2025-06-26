@@ -1,0 +1,58 @@
+.signupformmain{
+    background: url('./tokyoguesthouse1.png') no-repeat center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center; /*Center container horizontally*/
+
+}
+.signupform {
+    align-self: center; /*Center container vertically*/
+    align-content: center; /*Center Children vertically*/
+    background-color: rgb(52, 50, 50, 0.75);
+    border-radius: 15px;
+    height: 500px;
+    width: 500px;
+
+}
+.signupwrapper{
+    color: white;
+}
+
+.signupwrapper label {
+    color: white;
+    display: inline-block;
+    width: 100%;
+
+}
+input {
+    width: 15vw;
+    height: 25px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+.submitbutton {
+    background-color: black;
+    width: 15vw;
+    height: 35px;
+    color: white;
+    border-radius: 5px;
+}
+.signupbutton:hover {
+    background-color: white;
+    color: black;
+}
+strong {
+    font-size: 35px;
+    color: white;
+}
+.signupmessage {
+    color: white;
+}

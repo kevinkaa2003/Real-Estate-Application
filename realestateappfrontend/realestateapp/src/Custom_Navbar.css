@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+ @keyframes expandWidth {
+from {
+    width: 0;
+}
+to {
+    width: 65%;
+}
+}
+
+.expand-width {
+    animation: expandWidth 1.5s ease-in-out forwards;
+}
+
+@keyframes expandHeight {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+.expand-height {
+    animation: expandHeight 1.0s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+}
+header {
+    display: flex;
+    height: 75px;
+    background-color: grey;
+}
+button {
+    background-color: transparent;
+    border: none;
+    font-size: large;
+    font-weight: 200;
+    border-radius: 5px;
+    vertical-align: middle;
+    line-height: 50px;
+    border-color: white;
+    box-shadow: none;
+    min-width: 100px;
+    padding: 10px;
+    font-family: 'Georgia', sans-serif;
+
+
+}
+.navbar button:hover {
+   color: rgb(131, 131, 139);
+
+}
+
+
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color:rgba(54, 54, 57);
+    height: 100px;
+    align-items: center;
+    position: relative;
+    z-index: 10; /* Higher than slideshow */
+    width: 100vw;
+
+}
+.navbar img{
+    scale: 0.3;
+}
+
+.navbarcomponents {
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    gap: 50px;
+
+}
+.search {
+    display: flex;
+    align-self: center;
+    left: 35%;
+
+    bottom: 1220px;
+}
+
+.search input {
+   border-radius: 10px;
+   width: 300px;
+
+   height: 30px;
+}
+.search-results {
+    margin-top: 60px;
+    position: absolute;
+    z-index: 10;
+    background-color: rgb(146, 146, 169);;
+    border-radius: 3px;
+    padding: 5px;
+    width: 230px;
+}
+.search-results a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    text-align:left;
+}
+.search-results a:hover {
+    background-color: rgb(49, 49, 50);
+
+}
+.noresultsdiv {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+.navbarhome {
+    position: relative;
+    display: inline-block;
+    font-size: medium;
+    font-weight: 200;
+}
+.navbarhome:hover .navbarhomebtn { /*Hover Animation (Scale) */
+
+}
+.navbarhomebtn a {
+    font-size: medium;
+    font-weight: 200;
+    color:  rgb(86, 198, 249);
+    text-decoration: none;
+}
+.dropdowncontact { /*contactbar*/
+    position: relative;
+    display: inline-block;
+    font-size: medium;
+    color: white;
+}
+.dropdowncontactbtn {
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+}
+.dropdowncontact:hover .dropdowncontactbtn { /*Animation for Label Hover*/
+
+}
+.dropdown-content-contact {
+    overflow: hidden;
+    display: block;
+    height: 0;
+    transition: height 1.0s ease-in-out;
+    position: absolute;
+    background-color: rgb(146, 146, 169);
+    min-width: 350px;
+    z-index: 1;
+    text-align: left;
+    padding-left: 20px;
+    border-radius: 5%;
+
+}
+.dropdown-content-contact a {
+    color:  white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Georgia', serif;
+}
+.dropdown-content-contact p {
+    font-family: 'Georgia', serif;
+    padding-left: 10px;
+}
+.dropdown-content-contact span {
+    font-family: 'Georgia', serif;
+    color: white;
+    font-size: 18px;
+    text-decoration: underline;
+}
+.dropdown-content-contact a:hover {
+    background-color: transparent;
+}
+.dropdowncontact:hover .dropdown-content-contact {
+    height: 350px;
+}
+
+.facebooknav {
+    position: relative;
+    color:white; /* Set your desired text color */
+    text-decoration: none;
+    font-size: medium;
+}
+.facebooknav:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust position below the text */
+    width: 0;
+    height: 2px; /* Adjust underline height */
+    background-color:blue;/* Set your desired underline color */
+    transition: width 0.3s ease-in-out; /* Animation duration and easing */
+}
+.facebooknav:hover::after {
+    width: 30%;
+}
+
+.twitternav {
+    position: relative;
+    color:white; /* Set your desired text color */
+    text-decoration: none;
+    font-size: medium;
+}
+.twitternav:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust position below the text */
+    width: 0;
+    height: 2px; /* Adjust underline height */
+    background-color:lightblue;/* Set your desired underline color */
+    transition: width 0.3s ease-in-out; /* Animation duration and easing */
+}
+.twitternav:hover::after {
+    width: 25%;
+}
+.instagramnav {
+    position: relative;
+    color: white; /* Set your desired text color */
+    text-decoration: none;
+    font-size: medium;
+}
+.instagramnav:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust position below the text */
+    width: 0;
+    height: 2px; /* Adjust underline height */
+    background-color:burlywood;/* Set your desired underline color */
+    transition: width 0.3s ease-in-out; /* Animation duration and easing */
+}
+.instagramnav:hover::after {
+    width: 30%;
+}
+
+.navbar button {
+    color: white;
+}
+.login {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
